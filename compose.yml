@@ -1,0 +1,10 @@
+services:
+
+  database:
+    image: fluent/database:latest
+    build: ./database
+    ports:
+      - 5432:5432
+    env_file:
+      - ./database/env/devel.env
+    
