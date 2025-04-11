@@ -1,0 +1,9 @@
+services:
+
+  database:
+    env_file:
+      - ./database/env/test.env
+
+  dbmate:
+    env_file:
+      - ./dbmate/env/test.env

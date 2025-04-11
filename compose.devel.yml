@@ -1,0 +1,20 @@
+services:
+
+  database:
+    ports:
+      - 5432:5432
+    volumes:
+      - database_data:/var/lib/pgsql/data
+    env_file:
+      - ./database/env/devel.env
+
+  dbmate:
+    volumes:
+      - ./dbmate/db:/db
+    env_file:
+      - ./dbmate/env/devel.env
+    depends_on:
+      - database
+
+volumes:
+  database_data:

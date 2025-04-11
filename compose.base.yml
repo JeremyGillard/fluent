@@ -1,0 +1,9 @@
+services:
+
+  database:
+    image: fluent/database:latest
+    build: ./database
+
+  dbmate:
+    image: fluent/dbmate:latest
+    build: ./dbmate
